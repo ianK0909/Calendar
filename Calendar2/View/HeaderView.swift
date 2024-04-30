@@ -1,26 +1,19 @@
-//
-//  HeaderView.swift
-//  Calendar2
-//
-//  Created by MAC2020 on 4/23/24.
-//
 
 import SwiftUI
 
 struct HeaderView: View {
     
-    @State private var selectedDate2: Date = Date()
+    @Binding var selectedDate: Date
     
     var body: some View {
         
-        let formatterStringDate = DateFormatter.formattedDate(date: selectedDate2)
+        let formatterStringDate = DateFormatter.formattedDate(date: selectedDate)
         
         VStack {
             HStack(spacing: 0, content: {
                 Text("TODAY")
                     .font(.callout)
                 Spacer()
-//                Text("\(selectedDate, formatter: dateFormatter)")
                 Text("\(formatterStringDate)")
                     .font(.title2.bold())
                 Spacer()
@@ -53,6 +46,6 @@ struct HeaderView: View {
     }
 }
 
-#Preview {
-    HeaderView()
-}
+//#Preview {
+//    HeaderView(selectedDate: )
+//}
