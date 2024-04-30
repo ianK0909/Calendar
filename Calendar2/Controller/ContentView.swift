@@ -31,7 +31,7 @@ struct ContentView: View {
                     HeaderViewNavigatrionBar(selectedDate: $selectedDate)
                     ScrollView(.horizontal) {
                         LazyHStack(spacing: 0, content: {
-                            ForEach(4..<13) { monthIndex in
+                            ForEach(5..<13) { monthIndex in
                                 VStack{
                                     Spacer().frame(height: 60)
                                     CalendarView(selectedDate: $selectedDate, monthIndex: monthIndex)
